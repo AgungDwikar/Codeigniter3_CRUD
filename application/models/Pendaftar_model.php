@@ -9,6 +9,26 @@ class Pendaftar_model extends CI_Model {
     return $result;
   }
 
+  public function tambah($data)
+  {
+    $this->db->insert('pendaftar', $data);
+  }
+
+  public function get_id_pendaftar($id){
+    $query = $this->db->get_where('pendaftar', array('id' => $id));
+    return $query;
+  }
+
+  public function ubah($id, $data){
+    $this->db->where('id', $id);
+    $this->db->update('pendaftar', $data);
+  }
+
+  public function delete($id){
+    $this->db->where('id', $id);
+    $this->db->delete('pendaftar');
+  }
+
 }
 
 ?>
