@@ -19,8 +19,8 @@
           <th>Email</th>
           <th>Umur</th>
           <th>Judul</th>
-          <th>pemrakarsa</th>
-          <th>Penganggung Jawab</th>
+          <th>Pemrakarsa</th>
+          <th>Penanggung Jawab</th>
           <th>Aksi</th>
         </tr>
       </thead>
