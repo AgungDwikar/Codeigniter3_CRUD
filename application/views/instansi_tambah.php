@@ -27,6 +27,7 @@
                     <input type="text" class="form-control" name="instansi_jenis_id" placeholder="masukan jenis id">
                 </div>
                 <button type="submit" class="btn btn-primary">simpan</button>
+                
         </form>
         </div>
         </div>
