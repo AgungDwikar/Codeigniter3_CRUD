@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Sep 2021 pada 17.08
+-- Waktu pembuatan: 25 Sep 2021 pada 03.47
 -- Versi server: 10.4.20-MariaDB
 -- Versi PHP: 8.0.9
 
@@ -65,8 +65,30 @@ CREATE TABLE `tb_instansi` (
 
 INSERT INTO `tb_instansi` (`instansi_id`, `instansi_nama`, `instansi_jenis_id`) VALUES
 (2, 'kabupaten aceh tengah 4', 1),
-(5, 'sulawesi', 1),
-(9, 'jakarta pusat', 1);
+(12, 'kabupaten aceh tengah', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_jenis_instansi`
+--
+
+CREATE TABLE `tb_jenis_instansi` (
+  `jenis_id` int(11) NOT NULL,
+  `jenis_nama` varchar(50) NOT NULL,
+  `jenis_desk` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tb_jenis_instansi`
+--
+
+INSERT INTO `tb_jenis_instansi` (`jenis_id`, `jenis_nama`, `jenis_desk`) VALUES
+(1, 'jakarta', '2'),
+(2, 'jakarta barat', '3'),
+(3, 'jakarta barat', '3'),
+(5, 'jaksel', '1'),
+(7, 'bogor', '1');
 
 --
 -- Indexes for dumped tables
@@ -85,6 +107,12 @@ ALTER TABLE `tb_instansi`
   ADD PRIMARY KEY (`instansi_id`);
 
 --
+-- Indeks untuk tabel `tb_jenis_instansi`
+--
+ALTER TABLE `tb_jenis_instansi`
+  ADD PRIMARY KEY (`jenis_id`);
+
+--
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
@@ -98,7 +126,13 @@ ALTER TABLE `pendaftar`
 -- AUTO_INCREMENT untuk tabel `tb_instansi`
 --
 ALTER TABLE `tb_instansi`
-  MODIFY `instansi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `instansi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_jenis_instansi`
+--
+ALTER TABLE `tb_jenis_instansi`
+  MODIFY `jenis_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
