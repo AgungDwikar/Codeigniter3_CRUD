@@ -9,10 +9,10 @@ class User extends CI_Controller
     {
         parent::__construct();
         $this->load->model('user_model');
-        // if (!$this->session->userdata('auth')) {
-        //     $this->session->set_flashdata('message', 'Anda tidak berhak mengakses halaman ini');
-        //     redirect('auth');
-        // }
+        if (!$this->session->userdata('auth')) {
+            $this->session->set_flashdata('messageAkses', 'Anda tidak berhak mengakses halaman User');
+            redirect('auth');
+        }
     }
     
     public function index()

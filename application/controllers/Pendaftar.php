@@ -9,6 +9,10 @@ class Pendaftar extends CI_Controller {
   {
     parent::__construct();
     $this->load->model('pendaftar_model');
+    if (!$this->session->userdata('auth')) {
+      $this->session->set_flashdata('messageAkses', 'Anda tidak berhak mengakses halaman Pendaftar');
+      redirect('auth');
+    }
   }
   
 
