@@ -31,7 +31,8 @@ class Auth extends CI_Controller
       $this->session->set_flashdata('messageUser', 'User tidak ditemukan');
       redirect('auth');
     } else {
-      if (md5($password) == $user->password) {
+      // if (md5($password) == $user->password) {
+      if ($password == $user->password) {
         $session = array(
           'auth' => true,
           'nama' => $user->nama,
